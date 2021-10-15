@@ -1,0 +1,33 @@
+
+/* .app {
+    padding: 0;
+    margin: 0;
+} */
+
+
+.claculator-wrapper{
+    display: grid;
+
+}
+
+.componentWrapper{
+  margin: 0 auto;
+  padding: 0;
+}
+
+.claculator-components{
+  display: grid;
+  box-shadow: 0 5px 15px 10px rgba(94, 97, 106, 0.2);
+  margin: 0 auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "logic logic logic logic"
+    "upperOperator upperOperator upperOperator operation"
+    "digit digit digit operation"
+    "digit digit digit operation"
+    "digit digit digit operation"
+    "digit digit digit equal";
+  gap: 1px; 
+}
+

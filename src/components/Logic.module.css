@@ -1,0 +1,22 @@
+.logic-wrapper {
+  grid-area: UpperOperator;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  
+  grid-area: logic;
+  text-align: right;
+  transform: translateY(18px);
+  
+}
+
+.logic-display {
+  background-color: rgba(218, 211, 211, 0.92);
+  color: black;
+  padding: 1em;
+  font-size: 1.2em;
+  text-transform: uppercase; 
+
+}
+
+

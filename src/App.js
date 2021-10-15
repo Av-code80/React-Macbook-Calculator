@@ -3,7 +3,7 @@ import MainHeader from './components/MainHeader';
 import UpperOperator from './components/UpperOperator';
 import Operators from './components/Operators';
 import Equal from './components/Equal';
-import Logic from './components/Logic';
+import TotalDisplay from './components/Logic';
 import styles from './App.module.css';
 
 
@@ -14,7 +14,7 @@ const App = () => {
         <MainHeader />
         <article className={styles.componentWrapper}>
           <div className={styles["claculator-components"]}>
-            <Logic />
+            <TotalDisplay />
             <UpperOperator />
             <Digit />
             <Operators />

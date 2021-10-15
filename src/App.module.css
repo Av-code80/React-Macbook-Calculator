@@ -7,17 +7,17 @@
 
 .claculator-wrapper{
     display: grid;
-
 }
 
 .componentWrapper{
-  display: grid;
   margin: 0 auto;
-  /* position: relative; */
+  position: relative;
+  align-items: flex-start;
+
 }
 
 .claculator-components{
-  /* position:absolute; */
+  position:absolute;
   display: grid;
   width: 100%;
   padding: 3em;
@@ -25,15 +25,17 @@
   margin: 0 auto;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-    grid-column-end: -3;
+  align-items: flex-start; 
 
   grid-template-areas:
-    "logic logic logic logic"
+    "TotalDisplay TotalDisplay TotalDisplay TotalDisplay"
     "upperOperator upperOperator upperOperator operation"
     "digit digit digit operation"
     "digit digit digit operation"
     "digit digit digit operation"
     "digit digit digit equal";
   gap: 1px; 
+
 }
+
 

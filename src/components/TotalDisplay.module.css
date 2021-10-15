@@ -1,22 +1,21 @@
+
 .TotalDisplay-wrapper {
-  grid-area: UpperOperator;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
   width: 112%;
-  grid-area: logic;
+  color: rgb(247, 244, 244);
   text-align: right;
-  transform: translateY(18px);
-  
+  transform: translateY(18px); 
+  grid-area: TotalDisplay;
 }
 
-.TotalDisplay-display {
-  background-color: rgba(218, 211, 211, 0.92);
-  color: black;
+.TotalDisplay {
+  background-color: rgba(74, 63, 63, 0.92);
   padding: 1.2em;
   font-size: 1.2em;
   text-transform: uppercase; 
-
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
 }
 
 

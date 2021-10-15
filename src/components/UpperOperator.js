@@ -3,14 +3,19 @@ import styles from './UpperOperator.module.css'
 
 
 const UpperOperator = () => {
+
+     const handleClick = (e) => {
+        handleClick(e.target.value)
+     }
+
     return (
         <div className={styles['upper-wrapper']}>
             
-            <button type="button" className={styles['upper-btn']}
+            <button  onClick={handleClick} type="button" className={styles['upper-btn']}
             value="Ac">Ac</button>
-            <button type="button" className={styles['upper-btn']}
+            <button onClick={handleClick} type="button" className={styles['upper-btn']}
             value="+/-">+/-</button>
-            <button type="button" className={styles['upper-btn']}
+            <button onClick={handleClick} type="button" className={styles['upper-btn']}
             value="%">%</button>
 
         </div>

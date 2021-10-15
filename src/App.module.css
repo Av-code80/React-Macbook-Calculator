@@ -1,10 +1,4 @@
 
-/* .app {
-    padding: 0;
-    margin: 0;
-} */
-
-
 .claculator-wrapper{
     display: grid;
 }
@@ -12,17 +6,16 @@
 .componentWrapper{
   margin: 0 auto;
   position: relative;
-  align-items: flex-start;
-
 }
 
 .claculator-components{
-  position:absolute;
+  position: absolute;
   display: grid;
-  width: 100%;
   padding: 3em;
-  box-shadow: 0 5px 15px 10px rgba(94, 97, 106, 0.2);
+  width: 100%;
+  box-shadow: 0 5px 15px 10px rgba(103, 104, 108, 0.2);
   margin: 0 auto;
+  gap: 1px; 
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   align-items: flex-start; 
@@ -34,8 +27,6 @@
     "digit digit digit operation"
     "digit digit digit operation"
     "digit digit digit equal";
-  gap: 1px; 
-
 }
 
 

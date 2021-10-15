@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./Equal.module.css"
 
-
 const Equal = (props) => {
   const handleClick = (e) => {
     const { handleClick } = props;

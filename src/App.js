@@ -3,7 +3,7 @@ import MainHeader from './components/MainHeader';
 import UpperOperator from './components/UpperOperator';
 import Operators from './components/Operators';
 import Equal from './components/Equal';
-import TotalDisplay from './components/Logic';
+import TotalDisplay from './components/TotalDisplay';
 import styles from './App.module.css';
 
 

@@ -19,7 +19,7 @@ const MainHeader = () => {
         <IconContext.Provider value={{ color: "#ffffff" }}>
           <FaBars className={styles.faBars} onClick={handlerHeaderToggle} />
         </IconContext.Provider>
-        <h1>{!headerToggled ? "React Calculator Project" : "Projet Calculatrice en React"}</h1>
+        <h1>{!headerToggled ? "React Macbook Calculator Project" : "Projet Calculatrice de Macbook en React"}</h1>
       </header>
   );
 };

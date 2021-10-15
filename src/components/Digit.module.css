@@ -4,6 +4,8 @@
   gap: 1px;
   width: 50%;
   grid-area: digit;
+  border-bottom-right-radius: 1em;
+
 
 }
 
@@ -18,6 +20,5 @@
 .Digits-null{
   grid-column: span 2;
   border-bottom-left-radius: 1em;
-
 
 }

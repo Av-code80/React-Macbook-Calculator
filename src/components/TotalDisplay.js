@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./TotalDisplay.module.module.css"
+import styles from "./TotalDisplay.module.css"
 
 const isNull = (prop) => {
   if (!prop) {
@@ -24,7 +24,7 @@ const TotalDisplay = (props) => {
 
   return (
     <div className={styles['TotalDisplay-wrapper']}>
-      <p className={styles['TotalDislay-display']}>{current(total, next)}</p>
+      <p className={styles.TotalDisplay}>{current(total, next)}</p>
     </div>
   );
 };

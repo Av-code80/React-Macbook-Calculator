@@ -11,16 +11,22 @@
 }
 
 .componentWrapper{
+  display: grid;
   margin: 0 auto;
-  padding: 0;
+  /* position: relative; */
 }
 
 .claculator-components{
+  /* position:absolute; */
   display: grid;
+  width: 100%;
+  padding: 3em;
   box-shadow: 0 5px 15px 10px rgba(94, 97, 106, 0.2);
   margin: 0 auto;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
+    grid-column-end: -3;
+
   grid-template-areas:
     "logic logic logic logic"
     "upperOperator upperOperator upperOperator operation"

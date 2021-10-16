@@ -2,12 +2,12 @@ import React from 'react'
 import styles from './UpperOperator.module.css'
 
 
-const UpperOperator = () => {
+const UpperOperator = (props) => {
 
-     const handleClick = (e) => {
-        handleClick(e.target.value)
-     }
-
+    const handleClick = (e) => {
+    const { handleClick } = props;
+    handleClick(e.target.value);
+    }
     return (
         <div className={styles['upper-wrapper']}>
             

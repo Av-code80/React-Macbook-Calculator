@@ -2,14 +2,15 @@ import React from "react";
 import styles from "./Digit.module.css"
 
 
-const Digit = () => {
+const Digit = ({click}) => {
 
-  const handleClick = (e) => {
-
-    return handleClick(e.target.value)
+  const handleClick  = (e) => {
+    const value = e.target.value;
+    click(value)
+   
   }
 
-  return (
+  return ( // for == props for row 2
  <>
  <div className={styles['Digits-container']}>
     <button onClick={handleClick} type="button" className={styles['Digits-btn']} value="7">7</button>
@@ -22,8 +23,7 @@ const Digit = () => {
     <button onClick={handleClick} type="button" className={styles['Digits-btn']} value="2">2</button>
     <button onClick={handleClick} type="button" className={styles['Digits-btn']} value="3">3</button>
     <button onClick={handleClick} type="button" className={styles['Digits-null']} value="0">0</button>
-    <button onClick={handleClick} type="button" className={styles['Digits-btn']} value=".">.</button>
-   
+    <button onClick={handleClick} type="button" className={styles['Digits-btn']} value=".">.</button> 
 
   </div>
   </>

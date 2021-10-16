@@ -5,11 +5,9 @@
 
 .componentWrapper{
   margin: 0 auto;
-  position: relative;
 }
 
 .claculator-components{
-  position: absolute;
   display: grid;
   padding: 3em;
   width: 100%;
@@ -18,8 +16,8 @@
   gap: 1px; 
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-  align-items: flex-start; 
-
+  
+  
   grid-template-areas:
     "TotalDisplay TotalDisplay TotalDisplay TotalDisplay"
     "upperOperator upperOperator upperOperator operation"

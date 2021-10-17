@@ -12,15 +12,19 @@ const MainHeader = () => {
   };
 
   return (
-      <header
-        className={`${styles.headerButton} 
+    <header
+      className={`${styles.headerButton} 
         ${headerToggled ? styles.headerColorChanged : ""}`}
-      >
-        <IconContext.Provider value={{ color: "#ffffff" }}>
-          <FaBars className={styles.faBars} onClick={handlerHeaderToggle} />
-        </IconContext.Provider>
-        <h1>{!headerToggled ? "React Macbook Calculator Project" : "Projet Calculatrice de Macbook en React"}</h1>
-      </header>
+    >
+      <IconContext.Provider value={{ color: "#ffffff" }}>
+        <FaBars className={styles.faBars} onClick={handlerHeaderToggle} />
+      </IconContext.Provider>
+      <h1>
+        {!headerToggled
+          ? "React Macbook Calculator Project"
+          : "Projet Calculatrice de Macbook en React"}
+      </h1>
+    </header>
   );
 };
 

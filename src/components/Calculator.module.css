@@ -1,0 +1,58 @@
+.calculator-wrapper {
+  display: grid;
+  width: 40%;
+  height: 30rem;
+  margin: 2em 20em;
+  border-radius: 1.7em 1.7em 0.8em 0.8em;
+  background-color: black;
+}
+
+.calculator-Keyboard {
+  display: grid;
+  grid-template-columns: auto, auto, auto, auto;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "a a a b"
+    "c c c b"
+    "c c c b"
+    "c c c b"
+    "c c c b";
+    gap: 1px;
+}
+
+.calculator-display {
+  background-color: rgb(53, 50, 53);
+  text-align: right;
+  height: 2.5em;
+  font-weight: bold;
+  font-size: xx-large;
+  border-radius: 0.8em 0.8em 0 0;
+}
+
+.totalDisplay {
+  color: #fff;
+  margin: 0.8em 0.5em;
+}
+
+.keysFunction {
+  grid-area: a;
+}
+
+.keysOperation {
+  grid-area: b;
+}
+
+.keysDigits {
+  grid-area: c;
+  grid-auto-flow: dense;
+}
+
+.keysDigits .keyZero{
+  width: 2em;
+  background-color: red;
+  padding: 6em;
+}
+
+.keysDigits .keyDat {
+  color: red;
+}

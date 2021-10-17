@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import MainButton from "./MainButton";
 
-// import MainHeader from "./MainHeader";
 import styles from "./Calculator.module.css";
 
 
@@ -13,6 +12,33 @@ function Calculator() {
 
 useEffect(() => {}, [prevValue, nextValue, operation])
 
+
+const handleNum = (number) => {
+  setNextValue(nextValue === "0" ? String(number) : nextValue + number)
+}
+
+const handleDot = () => {
+  if (!/\./.test(nextValue)) {
+    setNextValue(nextValue + ".")
+  }
+}
+
+const handlePercentage = () => {
+  setNextValue(parseFloat(nextValue) / 100);
+    if (prevValue && nextValue === "") {
+      setPrevValue(parseFloat(prevValue) / 100);
+    }
+}
+
+const handleChangeSigne = () => {
+  setNextValue(parseFloat(nextValue) * -1)
+}
+
+const handleClearData = () => {
+  setNextValue("0")
+  setPrevValue("0")
+}
+
 const operationCalculator = {
   "÷": (firstVal, secondVal) => firstVal / secondVal,
   "×": (fisrtVal, secondVal) => fisrtVal * secondVal,
@@ -21,20 +47,49 @@ const operationCalculator = {
   "=": (firstVal, secondVal) => secondVal,
 };
 
-const handlerNum = (number) => {
-  setNextValue(nextValue === "0" ? String(number) : nextValue + number)
+const handleOperation = () => {
+   const res = operationCalculator[operation] (
+     parseFloat(prevValue),
+     parseFloat(nextValue))
+
+     setOperation(null)
+     setNextValue(String(res))
+     setPrevValue(null)
 }
 
-const handlerDot = () => {
-  if (!/\./.test(nextValue)){
-    setNextValue(nextValue + ".");
+
+const handlerFunction = (value) => {
+  if (Number.isInteger(value)) {
+    handleNum(parseInt(value, 10))
+  }
+  else if ( value in operationCalculator) {
+    if (operation === null) {
+      setOperation(value)
+      setPrevValue(nextValue)
+      setNextValue("")
+    }
+    if (operation) {
+      setOperation(value)
+    }
+    if (prevValue && nextValue && operation) {
+        handleOperation()
+    }
+    else if (value === "AC") {
+      handleClearData()
+    }
+    else if (value === "+/-") {
+      handleChangeSigne()
+    }
+    else if (value === ".") {
+      handleDot()
+    }
+    else if (value === "%") {
+      handlePercentage()
+    }
   }
 }
 
 
-const handlerFunction = () => {
-
-}
   return (
 <>
       <div className={styles["calculator-wrapper"]}>

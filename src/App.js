@@ -1,7 +1,8 @@
-import React from "react";
+import React from "react"
 
-import Calculator from "./components/Calculator";
 import MainHeader from "./components/MainHeader";
+import Calculator from "./components/Calculator";
+
 
 const App = () => {
   return (

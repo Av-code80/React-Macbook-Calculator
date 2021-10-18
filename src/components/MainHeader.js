@@ -22,7 +22,7 @@ const MainHeader = () => {
       <h1>
         {!headerToggled
           ? "React Macbook Calculator Project"
-          : "Projet Calculatrice de Macbook en React"}
+          : "@Aveh - All Rights Reserved"}
       </h1>
     </header>
   );

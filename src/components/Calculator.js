@@ -6,8 +6,8 @@ import styles from "./Calculator.module.css";
 
 
 function Calculator() {
-  const [prevValue, setPrevValue] = useState(null);
   const [nextValue, setNextValue] = useState("0");
+  const [prevValue, setPrevValue] = useState(null);
   const [operation, setOperation] = useState(null);
 
 useEffect(() => {}, [prevValue, nextValue, operation])
@@ -16,6 +16,7 @@ useEffect(() => {}, [prevValue, nextValue, operation])
 const handleNum = (number) => {
   setNextValue(nextValue === "0" ? String(number) : nextValue + number)
 }
+
 
 const handleDot = () => {
   if (!/\./.test(nextValue)) {
@@ -35,8 +36,10 @@ const handleChangeSigne = () => {
 }
 
 const handleClearData = () => {
-  setNextValue("0")
-  setPrevValue("0")
+ setNextValue("0");
+ setPrevValue("0");
+
+ 
 }
 
 const operationCalculator = {
@@ -52,7 +55,7 @@ const handleOperation = () => {
      parseFloat(prevValue),
      parseFloat(nextValue))
 
-     setOperation(null)
+     setOperation(true)
      setNextValue(String(res))
      setPrevValue(null)
 }
@@ -124,7 +127,7 @@ const handlerFunction = (value) => {
               onClick={handlerFunction}
             />
             <MainButton
-              keyValue={","}
+              keyValue={"."}
               className={styles.keyDat}
               onClick={handlerFunction}
             />

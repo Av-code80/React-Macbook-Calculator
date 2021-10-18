@@ -91,7 +91,7 @@ const handlerFunction = (value) => {
 
 
   return (
-<>
+    <>
       <div className={styles["calculator-wrapper"]}>
         <div className={styles["calculator-display"]}>
           <div className={styles.totalDisplay}>{nextValue}</div>
@@ -121,7 +121,6 @@ const handlerFunction = (value) => {
             <MainButton keyValue={3} onClick={handlerFunction} />
             <MainButton
               keyValue={0}
-              className={styles.keyZero}
               onClick={handlerFunction}
             />
             <MainButton
@@ -132,8 +131,8 @@ const handlerFunction = (value) => {
           </div>
         </div>
       </div>
-</>
-   )
+    </>
+  );
 }
 
 export default Calculator

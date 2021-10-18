@@ -1,17 +1,25 @@
 .calculator-wrapper {
   display: grid;
-  width: 32.7%;
+  width: 23.4%;
   height: 27rem;
-  margin: 2em 20em;
+  margin: 2em 34em;
   border-radius: 1em 1em 0.8em 0.8em;
   background-color: black;
   overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+ .calculator-wrapper{
+    width: 90%;
+    height: 27rem;
+    margin: 2em 1em;
+   
+  }
 }
 
 .calculator-Keyboard {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(5, 1fr); */
+  grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
     "a a a b"
     "c c c b"
@@ -38,7 +46,7 @@
 }
 
 .functionColor{
-  background-color: rgb(59, 53, 62);
+  background-color: rgb(46, 34, 52);
 }
 
 .keysOperation {

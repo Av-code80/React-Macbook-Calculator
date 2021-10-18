@@ -1,32 +1,31 @@
 .calculator-wrapper {
   display: grid;
-  width: 35%;
-  height: 30rem;
+  width: 32.7%;
+  height: 27rem;
   margin: 2em 20em;
-  border-radius: 1.7em 1.7em 0.8em 0.8em;
+  border-radius: 1em 1em 0.8em 0.8em;
   background-color: black;
+  overflow: hidden;
 }
 
 .calculator-Keyboard {
   display: grid;
-  grid-template-columns: auto, auto, auto, auto;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-rows: repeat(5, 1fr); */
   grid-template-areas:
     "a a a b"
     "c c c b"
     "c c c b"
     "c c c b"
     "c c c b";
-    gap: 1px;
 }
 
 .calculator-display {
-  background-color: rgb(53, 50, 53);
+  background-color: rgb(59, 53, 62);
   text-align: right;
   height: 2.5em;
   font-weight: bold;
   font-size: xx-large;
-  border-radius: 0.8em 0.8em 0 0;
 }
 
 .totalDisplay {
@@ -38,26 +37,23 @@
   grid-area: a;
 }
 
+.functionColor{
+  background-color: rgb(59, 53, 62);
+}
+
 .keysOperation {
   grid-area: b;
 }
 
+.orangeOperation{
+  background-color: rgb(249, 160, 7);
+}
+
 .keysDigits {
   grid-area: c;
-  grid-auto-flow: dense;
 }
 
-.keysDigits .keyZero{
-  width: 2em;
-  padding: 8em;
-}
-
-.keysDigits .keyDat {
-  color: red;
-}
-
-button[keyValue=0] {
-    background-color: red;
-      width: 20em;
-  padding: 8em;
+ .keyZero{
+  
+  width: 7em;
 }

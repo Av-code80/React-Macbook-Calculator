@@ -4,7 +4,7 @@ import MainButton from "./MainButton";
 import styles from "./Calculator.module.css";
 
 function Calculator() {
-  const [nextValue, setNextValue] = useState("0");
+  const [nextValue, setNextValue] = useState("");
   const [prevValue, setPrevValue] = useState(null);
   const [operation, setOperation] = useState(null);
 
@@ -31,7 +31,7 @@ function Calculator() {
     setNextValue(parseFloat(nextValue) * -1);
   };
 
-  const handleClearData = () => {  // ???
+  const handleClearData = () => {
     setNextValue("0");
     setPrevValue("0");
   };
@@ -45,7 +45,7 @@ function Calculator() {
   };
 
   const handleOperation = () => {
-    const res = operationCalculator[operation](  
+    const res = operationCalculator[operation](
       parseFloat(prevValue),
       parseFloat(nextValue)
     );
@@ -63,13 +63,13 @@ function Calculator() {
       if (operation === null) {
         setPrevValue(nextValue);
         setNextValue("");
-      } 
+      }
       if (prevValue && nextValue && operation) {
         handleOperation();
-      }      
-      // else if (value === "AC") {   //??
-      //   handleClearData(); 
-      // } else if (value === "+/-") {  //??
+      }
+      // else if (value === "AC") {
+      //   handleClearData();
+      // } else if (value === "+/-") {
       //   handleChangeSigne();
       // } else if (value === ".") {
       //   handleDot();
@@ -87,16 +87,48 @@ function Calculator() {
         </div>
         <div className={styles["calculator-Keyboard"]}>
           <div className={styles.keysFunction}>
-            <MainButton nameOfClass={styles.functionColor} keyValue={"AC"} onClick={handleClearData} />
-            <MainButton nameOfClass={styles.functionColor} keyValue={"+/-"} onClick={handleChangeSigne} />
-            <MainButton nameOfClass={styles.functionColor} keyValue={"%"} onClick={handlePercentage} />
+            <MainButton
+              nameOfClass={styles.functionColor}
+              keyValue={"AC"}
+              onClick={handleClearData}
+            />
+            <MainButton
+              nameOfClass={styles.functionColor}
+              keyValue={"+/-"}
+              onClick={handleChangeSigne}
+            />
+            <MainButton
+              nameOfClass={styles.functionColor}
+              keyValue={"%"}
+              onClick={handlePercentage}
+            />
           </div>
           <div className={styles.keysOperation}>
-            <MainButton nameOfClass={styles.orangeOperation} keyValue={"÷"} onClick={handlerFunction} />
-            <MainButton nameOfClass={styles.orangeOperation} keyValue={"×"} onClick={handlerFunction} />
-            <MainButton nameOfClass={styles.orangeOperation} keyValue={"-"} onClick={handlerFunction} />
-            <MainButton nameOfClass={styles.orangeOperation} keyValue={"+"} onClick={handlerFunction} />
-            <MainButton nameOfClass={styles.orangeOperation} keyValue={"="} onClick={handlerFunction} />
+            <MainButton
+              nameOfClass={styles.orangeOperation}
+              keyValue={"÷"}
+              onClick={handlerFunction}
+            />
+            <MainButton
+              nameOfClass={styles.orangeOperation}
+              keyValue={"×"}
+              onClick={handlerFunction}
+            />
+            <MainButton
+              nameOfClass={styles.orangeOperation}
+              keyValue={"-"}
+              onClick={handlerFunction}
+            />
+            <MainButton
+              nameOfClass={styles.orangeOperation}
+              keyValue={"+"}
+              onClick={handlerFunction}
+            />
+            <MainButton
+              nameOfClass={styles.orangeOperation}
+              keyValue={"="}
+              onClick={handlerFunction}
+            />
           </div>
           <div className={styles.keysDigits}>
             <MainButton keyValue={7} onClick={handlerFunction} />

@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-import './MainButton.module.css';
-
+import "./MainButton.module.css";
 
 const MainButton = (props) => {
-// e.target.value ??
+  // e.target.value ??
 
   return (
     <button
@@ -16,8 +15,8 @@ const MainButton = (props) => {
       {""}
     </button>
   );
-}
+};
 
-export default MainButton
+export default MainButton;
 
 //  className={`${styles["props.className"]}`}

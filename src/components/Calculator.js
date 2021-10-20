@@ -31,7 +31,7 @@ function Calculator() {
     setNextValue(parseFloat(nextValue) * -1);
   };
 
-  const handleClearData = () => {
+  const handleClearData = () => {  // ???
     setNextValue("0");
     setPrevValue("0");
   };
@@ -45,12 +45,12 @@ function Calculator() {
   };
 
   const handleOperation = () => {
-    const res = operationCalculator[operation](
+    const res = operationCalculator[operation](  
       parseFloat(prevValue),
       parseFloat(nextValue)
     );
 
-    setOperation(true);
+    setOperation(null);
     setNextValue(String(res));
     setPrevValue(null);
   };
@@ -59,25 +59,23 @@ function Calculator() {
     if (Number.isInteger(value)) {
       handleNum(parseInt(value, 10));
     } else if (value in operationCalculator) {
+      setOperation(value);
       if (operation === null) {
-        setOperation(value);
         setPrevValue(nextValue);
         setNextValue("");
-      }
-      if (operation) {
-        setOperation(value);
-      }
+      } 
       if (prevValue && nextValue && operation) {
         handleOperation();
-      } else if (value === "AC") {
-        handleClearData();
-      } else if (value === "+/-") {
-        handleChangeSigne();
-      } else if (value === ".") {
-        handleDot();
-      } else if (value === "%") {
-        handlePercentage();
-      }
+      }      
+      // else if (value === "AC") {   //??
+      //   handleClearData(); 
+      // } else if (value === "+/-") {  //??
+      //   handleChangeSigne();
+      // } else if (value === ".") {
+      //   handleDot();
+      // } else if (value === "%") {
+      //   handlePercentage();
+      // }
     }
   };
 
@@ -89,9 +87,9 @@ function Calculator() {
         </div>
         <div className={styles["calculator-Keyboard"]}>
           <div className={styles.keysFunction}>
-            <MainButton nameOfClass={styles.functionColor} keyValue={"AC"} onClick={handlerFunction} />
-            <MainButton nameOfClass={styles.functionColor} keyValue={"+/-"} onClick={handlerFunction} />
-            <MainButton nameOfClass={styles.functionColor} keyValue={"%"} onClick={handlerFunction} />
+            <MainButton nameOfClass={styles.functionColor} keyValue={"AC"} onClick={handleClearData} />
+            <MainButton nameOfClass={styles.functionColor} keyValue={"+/-"} onClick={handleChangeSigne} />
+            <MainButton nameOfClass={styles.functionColor} keyValue={"%"} onClick={handlePercentage} />
           </div>
           <div className={styles.keysOperation}>
             <MainButton nameOfClass={styles.orangeOperation} keyValue={"÷"} onClick={handlerFunction} />
@@ -118,7 +116,7 @@ function Calculator() {
             <MainButton
               keyValue={"."}
               nameOfClass={styles.keyDat}
-              onClick={handlerFunction}
+              onClick={handleDot}
             />
           </div>
         </div>

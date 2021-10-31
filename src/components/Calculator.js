@@ -67,7 +67,7 @@ function Calculator() {
       if (prevValue && nextValue && operation) {
         handleOperation();
       }
-      // else if (value === "AC") {
+      // else if (value === "AC") { Shorter code
       //   handleClearData();
       // } else if (value === "+/-") {
       //   handleChangeSigne();
@@ -158,3 +158,9 @@ function Calculator() {
 }
 
 export default Calculator;
+
+
+
+
+
+
